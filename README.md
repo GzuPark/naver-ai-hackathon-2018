@@ -2,6 +2,7 @@
 
 ### 1. 해커톤 안내
 [[링크]](https://github.com/naver/ai-hackathon-2018/blob/master/README.md)
+[[YouTube]](https://youtu.be/cSGPHtzPFQw)
 
 ### 2. 참가 신청 폼
 [[링크]](http://naver.me/GyfLHzwg)
