@@ -39,7 +39,7 @@
 
 ### 소개
 [Kaggle](https://www.kaggle.com/)의 여러 NLP competition 에서 높은 순위를 기록하는 [Abhishek Thakur
-](https://www.kaggle.com/abhishek) 가 공개한 자신의 노하우를 튜토리얼로 보여준 [코드](https://www.kaggle.com/abhishek/approaching-almost-any-nlp-problem-on-kaggle/notebook)가 있다. 이 튜토리얼이 [Docker 환경](https://hub.docker.com/r/hermits/korean-nlp/) 에서 문제없이 돌아가는 것을 확인하였고, `Approaching Any NLP Problem on Kaggle.ipynb` 에 결과를 볼 수 있다.
+](https://www.kaggle.com/abhishek) 가 공개한 자신의 노하우를 튜토리얼로 보여준 [코드](https://www.kaggle.com/abhishek/approaching-almost-any-nlp-problem-on-kaggle/notebook)가 있다. 이 튜토리얼이 [Docker 환경](https://hub.docker.com/r/hermits/korean-nlp/) 에서 문제없이 돌아가는 것을 확인하였고, `Approaching_Any_NLP_Problem_on_Kaggle.ipynb` 에 결과를 볼 수 있다.
 
 ### 필수 다운로드
 1. Data: [Spooky Author Identification](https://www.kaggle.com/c/spooky-author-identification/data)
