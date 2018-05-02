@@ -26,12 +26,12 @@ nvidia-docker run -it --name <컨테이너이름> -p 8888:8888 \
 
 ### 실행
 1. on nsml environment, example
-```python
+```
 nsml run -d movie_final -a "--train_ratio 0.9"
 ```
 
 2. on local environment, example
-```python
+```
 # with GPU
 python main.py --sample sample --train_ratio 0.9 --gpus 0
 # without GPU
@@ -70,7 +70,7 @@ CNN 네트워크로 바로 적용하지 않고, RNN 네트워크를 통한 결�
 1. [issues](https://github.com/GzuPark/naver-ai-hackathon-2018/issues) 탭을 통하여 질의를 받습니다.
 2. Personal data는 제공하지 않습니다.
 3. Data를 구성하려면, `sample_data`나 `data`의 구조를 참고해주세요.
-4. `kor_long_char`에 사용한 음절(1951개)이 경우 Personal data에서 `빈도수 > 10`을 추출한 것이며,
+4. `kor_long_char`에 사용한 음절(1951개)이 경우 Personal data에서 `빈도수 > 10`을 추출한 것이며, [extract.ipynb](./kor_long_char/extract.ipynb)에서 과정을 살펴 볼 수 있다.
 
 ### License
 코드 및 파일은 기본 제공한 NAVER의 규약을 따르고, 네트워크 및 개발한 알고리즘의 경우 허락없이 사용할 수 있음.
