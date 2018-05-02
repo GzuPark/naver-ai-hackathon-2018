@@ -14,3 +14,8 @@
 ### 4. 문의
 * [FAQ](https://github.com/naver/ai-hackathon-2018/blob/master/FAQ.md)
 * [FAQ_NSML](https://github.com/naver/ai-hackathon-2018/blob/master/FAQ_NSML.md)
+
+### 5. 구성
+* [AbhishekNLP](./AbhishekNLP/README.md): Kaggle의 여러 NLP competition 에서 높은 순위를 기록하는 Abhishek Thakur가 공개한 노하우 튜토리얼
+* [soynlp](./soynlp/README.md): soynlp 공식 튜토리얼, 개인적 데이터는 비공개
+* [libs](./libs/README.md): 해커톤 예선 및 결선에서 사용한 코드
