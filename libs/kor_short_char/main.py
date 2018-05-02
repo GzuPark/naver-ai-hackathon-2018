@@ -223,11 +223,11 @@ if __name__ == '__main__':
     args.add_argument('--train_ratio', type=float, default=1.0)
     args.add_argument('--sample', type=str, default='nsml')
     args.add_argument('--gpus', type=int, default=2)
-    # args.add_argument('--shortcut', action='store_true', default=False)
     config = args.parse_args()
 
     assert config.train_ratio > 0.0
     assert config.train_ratio <= 1.0
+    assert config.sample in ['nsml', 'sample', 'personal']
 
     if not HAS_DATASET and not IS_ON_NSML:  # It is not running on nsml
         if config.sample == 'sample':
@@ -282,7 +282,7 @@ if __name__ == '__main__':
         if config.sample != 'nsml':
             import time
             localtime = time.localtime()
-            fname = 'loss_'
+            fname = str(config.sample) + '_'
             for i in range(5):
                 fname += str(localtime[i])
             fname = fname + '_' + str(config.epochs) + '_' + str(config.batch) + '_' + str(config.strmaxlen) + '_' + str(config.embedding_dim) + '_' + str(config.depth)
@@ -350,11 +350,11 @@ if __name__ == '__main__':
             nsml.save(epoch)
 
             if config.sample != 'nsml':
-                loss_fname = 'result/train_not_norm_' + fname
+                loss_fname = 'result/train_' + fname
                 with open(loss_fname, 'w', encoding='utf-8') as f:
                     f.writelines(['{:.5f}\n'.format(log) for log in cum_loss])
                 if config.train_ratio < 1.0:
-                    val_loss_fname = 'result/val_not_norm_' + fname
+                    val_loss_fname = 'result/val_' + fname
                     with open(val_loss_fname, 'w', encoding='utf-8') as f:
                         f.writelines(['{:.5f}\n'.format(log) for log in cum_val_loss])
 

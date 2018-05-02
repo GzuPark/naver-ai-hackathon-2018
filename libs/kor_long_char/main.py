@@ -227,6 +227,7 @@ if __name__ == '__main__':
 
     assert config.train_ratio > 0.0
     assert config.train_ratio <= 1.0
+    assert config.sample in ['nsml', 'sample', 'personal']
 
     if not HAS_DATASET and not IS_ON_NSML:  # It is not running on nsml
         if config.sample == 'sample':
@@ -281,7 +282,7 @@ if __name__ == '__main__':
         if config.sample != 'nsml':
             import time
             localtime = time.localtime()
-            fname = 'loss_'
+            fname = str(config.sample) + '_'
             for i in range(5):
                 fname += str(localtime[i])
             fname = fname + '_' + str(config.epochs) + '_' + str(config.batch) + '_' + str(config.strmaxlen) + '_' + str(config.embedding_dim) + '_' + str(config.depth)

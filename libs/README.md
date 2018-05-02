@@ -10,14 +10,12 @@ Preproces에서 normalize를 시도하기 위해 [mecab-ko](https://bitbucket.or
 
 ##### Docker for CPU
 ```script
-docker run -it --name <컨테이너이름> -p 8888:8888 \
--v <마운트할경로>:/home hermits/korean-nlp:latest bash
+docker run -it --name <컨테이너이름> -p 8888:8888 -v <마운트할경로>:/home hermits/korean-nlp:latest bash
 ```
 
 ##### Docker for GPU
 ```script
-nvidia-docker run -it --name <컨테이너이름> -p 8888:8888 \
--v <마운트할경로>:/home hermits/korean-nlp:latest bash
+nvidia-docker run -it --name <컨테이너이름> -p 8888:8888 -v <마운트할경로>:/home hermits/korean-nlp:latest bash
 ```
 
 ### 구성
@@ -25,17 +23,17 @@ nvidia-docker run -it --name <컨테이너이름> -p 8888:8888 \
 * **kor_long_char**: 결선 동안 시도하였던 음절 단위의 전처리
 
 ### 실행
-1. on nsml environment, example
+1. on nsml environment, example:
 ```
 nsml run -d movie_final -a "--train_ratio 0.9"
 ```
 
-2. on local environment, example
+2. on local environment, example:
 ```
 # with GPU
-python main.py --sample sample --train_ratio 0.9 --gpus 0
+python main.py --sample sample --train_ratio 0.9 --batch 10 --gpus 0
 # without GPU
-python main.py --sample sample --train_ratio 0.9
+python main.py --sample sample --train_ratio 0.9 --batch 10
 ```
 
 3. configuration parameters
